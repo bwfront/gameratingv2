@@ -1,0 +1,46 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<label for="title">
+	<f:translate key="tx_gameskey_domain_model_games.title" /> <span class="required">(required)</span>
+</label><br />
+	<f:form.textfield property="title" id="title" /><br />
+<label for="description">
+	<f:translate key="tx_gameskey_domain_model_games.description" /> <span class="required">(required)</span>
+</label><br />
+	<f:form.textarea property="description" id="description" cols="40" rows="15" /><br />
+<label for="rating">
+	<f:translate key="tx_gameskey_domain_model_games.rating" /> <span class="required">(required)</span>
+</label><br />
+	<f:form.textfield property="rating" id="rating" /><br />
+<label for="ratingCount">
+	<f:translate key="tx_gameskey_domain_model_games.rating_count" /> <span class="required">(required)</span>
+</label><br />
+	<f:form.textfield property="ratingCount" id="ratingCount" /><br />
+<label for="ratingSum">
+	<f:translate key="tx_gameskey_domain_model_games.rating_sum" /> <span class="required">(required)</span>
+</label><br />
+	<f:form.textfield property="ratingSum" id="ratingSum" /><br />
+<label for="image">
+	<f:translate key="tx_gameskey_domain_model_games.image" /> <span class="required">(required)</span>
+</label><br />
+	<span>File upload is not implemented!</span><br  /><br />
+<label for="relDate">
+	<f:translate key="tx_gameskey_domain_model_games.rel_date" /> <span class="required">(required)</span>
+</label><br />
+	<f:form.textfield property="relDate" id="relDate" value="{games.relDate->f:format.date()}" /><br />
+<label for="fsk18">
+	<f:translate key="tx_gameskey_domain_model_games.fsk18" /> <span class="required">(required)</span>
+</label><br />
+	<f:form.checkbox property="fsk18" id="fsk18" value="1" /><br />
+<label for="action">
+	<f:translate key="tx_gameskey_domain_model_games.action" /> <span class="required">(required)</span>
+</label><br />
+	<f:form.checkbox property="action" id="action" value="1" /><br />
+<label for="multiplayer">
+	<f:translate key="tx_gameskey_domain_model_games.multiplayer" /> <span class="required">(required)</span>
+</label><br />
+	<f:form.checkbox property="multiplayer" id="multiplayer" value="1" /><br />
+<label for="singleplayer">
+	<f:translate key="tx_gameskey_domain_model_games.singleplayer" /> <span class="required">(required)</span>
+</label><br />
+	<f:form.checkbox property="singleplayer" id="singleplayer" value="1" /><br />
+</html>

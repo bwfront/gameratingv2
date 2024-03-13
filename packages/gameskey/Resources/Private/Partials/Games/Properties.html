@@ -1,0 +1,50 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<table class="tx-gameskey">
+	<tr>
+		<td><f:translate key="tx_gameskey_domain_model_games.title" /></td>
+		<td>{games.title}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_gameskey_domain_model_games.description" /></td>
+		<td>{games.description}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_gameskey_domain_model_games.rating" /></td>
+		<td>{games.rating}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_gameskey_domain_model_games.rating_count" /></td>
+		<td>{games.ratingCount}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_gameskey_domain_model_games.rating_sum" /></td>
+		<td>{games.ratingSum}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_gameskey_domain_model_games.image" /></td>
+		<td>
+				<f:image src="{games.image.originalResource.publicUrl}" width="200"/>
+            </td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_gameskey_domain_model_games.rel_date" /></td>
+		<td>{games.relDate -> f:format.date()}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_gameskey_domain_model_games.fsk18" /></td>
+		<td>{games.fsk18}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_gameskey_domain_model_games.action" /></td>
+		<td>{games.action}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_gameskey_domain_model_games.multiplayer" /></td>
+		<td>{games.multiplayer}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_gameskey_domain_model_games.singleplayer" /></td>
+		<td>{games.singleplayer}</td>
+	</tr>
+</table>
+</html>

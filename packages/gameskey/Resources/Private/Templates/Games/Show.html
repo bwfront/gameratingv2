@@ -1,0 +1,107 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+Resources:
+Private:
+Templates:
+Games:
+Show.html: keep
+
+<f:section name="content">
+  <h1>Single View for Games</h1>
+  <f:link.action action="list">Back to list</f:link.action><br />
+
+  <f:flashMessages />
+
+  <div class="container">
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="fileadmin/image/{games.image.originalResource.name}" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h2 class="card-title">{games.title}</h2>
+            <p class="card-text"><small class="text-body-secondary">Release:
+                <f:format.date format="Y-m-d">{games.reldate}</f:format.date>
+              </small></p>
+            <p class="card-text">{games.description}</p>
+            <div class="row">
+              <div class="col-sm-6 mb-3 mb-sm-0">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title" id="rating">Rating: {games.rating}/5</h5>
+                    <p class="card-text">Rate the Game:</p>
+                    <f:for each="{0:1, 1:2, 2:3, 3:4, 4:5}" as="" iteration="i">
+                      <div class="btn btn-primary" onclick="rateGame('r{i.cycle}')">{i.cycle}</div>
+                    </f:for>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 mb-3 mb-sm-0">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">ADMIN</h5>
+                    <p class="card-text" id="adminrate">sum: {games.ratingSum} / count: {games.ratingCount} = {games.rating}</p>
+                      <div onclick="rateGame('reset')" class="btn btn-primary">ResetRating</div>
+                      <f:link.action id="reset" action="reset" arguments="{games: games}">
+                      </f:link.action>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+<script>
+    function rateGame(arg) {
+      fetch(document.getElementById(arg).href, {
+        method: 'GET',
+      })
+        .then(response => {
+          return response.json();
+        })
+        .then(data => {
+          console.log(data)
+          updateRating(data)
+        })
+        .catch((error) => console.error('Error:', error));
+
+    }
+
+    function updateRating(data) {
+      const rating = document.getElementById('rating')
+      const adminrate = document.getElementById('adminrate')
+      rating.innerHTML = `Rating: ${data.rating}/5`
+      adminrate.innerHTML = `sum: ${data.sum} / count: ${data.count} =
+          ${data.rating}`
+    }
+  </script>
+
+  <div style="display: none;">
+    <f:for each="{0:1, 1:2, 2:3, 3:4, 4:5}" as="" iteration="i">
+      <td>
+        <f:link.action id="r{i.cycle}" action="rate" arguments="{games : games, rating: '{i.cycle}'}">Test Action
+        </f:link.action>
+      </td>
+    </f:for>
+  </div>
+
+  <style>
+    .img-fluid {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  </style>
+
+</f:section>
+
+</html>

@@ -1,0 +1,99 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="content">
+  <h1>Filter</h1>
+
+  <div onclick="filter('all')" class="btn btn-primary">Delete Filter</div>
+  <div onclick="filter('fsk18')" class="btn btn-primary">FSK18</div>
+  <div onclick="filter('action')" class="btn btn-primary">Action</div>
+  <div onclick="filter('single')" class="btn btn-primary">Singleplayer</div>
+  <div onclick="filter('mulit')" class="btn btn-primary">Mulitplayer</div>
+
+  <h1>Listing for Games</h1>
+
+  <div class="games" id="games">
+
+  </div>
+
+  <div class="links" style="display: none;">
+    <f:for each="{games}" as="game">
+      <f:link.action id="{game.uid}" action="show" arguments="{games : game}" class="button">
+    </f:link.action>
+    </f:for>    
+
+    <f:link.action id="all" action="search" class="button" arguments="{games: games}">
+    </f:link.action>
+    <f:link.action id="fsk18" action="search" class="button" arguments="{games: games, arg: 'fsk18'}">
+    </f:link.action>
+    <f:link.action id="action" action="search" class="button" arguments="{games: games, arg: 'action'}">
+    </f:link.action>
+    <f:link.action id="single" action="search" class="button" arguments="{games: games, arg: 'singleplayer'}">
+    </f:link.action>
+    <f:link.action id="mulit" action="search" class="button" arguments="{games: games, arg: 'multiplayer'}">
+    </f:link.action>
+  </div>
+
+  <script>
+    function setHTML(data) {
+      const gamescon = document.getElementById('games');
+      gamescon.innerHTML = ""
+      data.forEach(game => {
+        const formattedDate = new Date(game.relDate.date).toISOString().split('T')[0];
+        gamescon.innerHTML += `
+        <div class="card" style="width: 18rem;" data-title="${game.title}">
+          <img src="fileadmin/image/${game.image}" class="card-img-top" alt="${game.title}">
+          <div class="card-body">
+            <h5 class="card-title">${game.title}</h5>
+            <p class="card-text"><div>${formattedDate}</div></small></p>
+            <a class="button" id="search" href="${document.getElementById(game.uid).href}">
+              <div class="btn btn-primary">Select</div>
+            </a>
+          </div>
+        </div>
+        `
+      });
+    }
+
+    function filter(arg) {
+      fetch(document.getElementById(arg).href, {
+        method: 'GET',
+      })
+        .then(response => {
+          return response.json();
+        })
+        .then(data => {
+          console.log(data)
+          setHTML(data)
+        })
+        .catch((error) => console.error('Error:', error));
+    }
+
+    filter('all')
+  </script>
+
+  <style>
+    body {
+      margin: 20px;
+    }
+    .games {
+      display: flex;
+    }
+
+    .card-img-top {
+      height: 380px;
+      object-fit: cover;
+    }
+
+    .button {
+      width: 100%;
+      display: block;
+    }
+
+    .button div {
+      width: 100%;
+    }
+  </style>
+</f:section>
+
+</html>

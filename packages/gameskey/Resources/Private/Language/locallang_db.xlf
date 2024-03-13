@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:gameskey/Resources/Private/Language/locallang_db.xlf" date="2024-03-12T14:38:43Z" product-name="gameskey">
+		<header/>
+		<body>
+			<trans-unit id="tx_gameskey_domain_model_games" resname="tx_gameskey_domain_model_games">
+				<source>Games</source>
+			</trans-unit>
+			<trans-unit id="tx_gameskey_domain_model_games.description" resname="tx_gameskey_domain_model_games.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_gameskey_domain_model_games.title" resname="tx_gameskey_domain_model_games.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_gameskey_domain_model_games.title.description" resname="tx_gameskey_domain_model_games.title.description">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_gameskey_domain_model_games.description.description" resname="tx_gameskey_domain_model_games.description.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_gameskey_domain_model_games.rating" resname="tx_gameskey_domain_model_games.rating">
+				<source>Rating</source>
+			</trans-unit>
+			<trans-unit id="tx_gameskey_domain_model_games.rating.description" resname="tx_gameskey_domain_model_games.rating.description">
+				<source>Rating /5</source>
+			</trans-unit>
+			<trans-unit id="tx_gameskey_domain_model_games.rating_count" resname="tx_gameskey_domain_model_games.rating_count">
+				<source>Rating Count</source>
+			</trans-unit>
+			<trans-unit id="tx_gameskey_domain_model_games.rating_count.description" resname="tx_gameskey_domain_model_games.rating_count.description">
+				<source>Count How Much Users Ratet The Game</source>
+			</trans-unit>
+			<trans-unit id="tx_gameskey_domain_model_games.rating_sum" resname="tx_gameskey_domain_model_games.rating_sum">
+				<source>Rating Sum</source>
+			</trans-unit>
+			<trans-unit id="tx_gameskey_domain_model_games.rating_sum.description" resname="tx_gameskey_domain_model_games.rating_sum.description">
+				<source>All Ratings Sum</source>
+			</trans-unit>
+			<trans-unit id="tx_gameskey_domain_model_games.image" resname="tx_gameskey_domain_model_games.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_gameskey_domain_model_games.image.description" resname="tx_gameskey_domain_model_games.image.description">
+				<source>Image Of The Game</source>
+			</trans-unit>
+			<trans-unit id="tx_gameskey_domain_model_games.rel_date" resname="tx_gameskey_domain_model_games.rel_date">
+				<source>Rel Date</source>
+			</trans-unit>
+			<trans-unit id="tx_gameskey_domain_model_games.rel_date.description" resname="tx_gameskey_domain_model_games.rel_date.description">
+				<source>Realese Date</source>
+			</trans-unit>
+			<trans-unit id="tx_gameskey_domain_model_games.fsk18" resname="tx_gameskey_domain_model_games.fsk18">
+				<source>Fsk18</source>
+			</trans-unit>
+			<trans-unit id="tx_gameskey_domain_model_games.fsk18.description" resname="tx_gameskey_domain_model_games.fsk18.description">
+				<source>Fsk18</source>
+			</trans-unit>
+			<trans-unit id="tx_gameskey_domain_model_games.action" resname="tx_gameskey_domain_model_games.action">
+				<source>Action</source>
+			</trans-unit>
+			<trans-unit id="tx_gameskey_domain_model_games.action.description" resname="tx_gameskey_domain_model_games.action.description">
+				<source>Action</source>
+			</trans-unit>
+			<trans-unit id="tx_gameskey_domain_model_games.multiplayer" resname="tx_gameskey_domain_model_games.multiplayer">
+				<source>Multiplayer</source>
+			</trans-unit>
+			<trans-unit id="tx_gameskey_domain_model_games.multiplayer.description" resname="tx_gameskey_domain_model_games.multiplayer.description">
+				<source>Multiplayer</source>
+			</trans-unit>
+			<trans-unit id="tx_gameskey_domain_model_games.singleplayer" resname="tx_gameskey_domain_model_games.singleplayer">
+				<source>Singleplayer</source>
+			</trans-unit>
+			<trans-unit id="tx_gameskey_domain_model_games.singleplayer.description" resname="tx_gameskey_domain_model_games.singleplayer.description">
+				<source>Singleplayer</source>
+			</trans-unit>
+			<trans-unit id="tx_gameskey_gamesfrontkey.name" resname="tx_gameskey_gamesfrontkey.name">
+				<source>Games Frontend</source>
+			</trans-unit>
+			<trans-unit id="tx_gameskey_gamesfrontkey.description" resname="tx_gameskey_gamesfrontkey.description">
+				<source></source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

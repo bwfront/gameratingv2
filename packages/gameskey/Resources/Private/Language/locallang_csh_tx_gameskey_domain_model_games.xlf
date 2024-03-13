@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:gameskey/Resources/Private/Language/locallang_csh_tx_gameskey_domain_model_games.xlf" date="2024-03-12T14:38:43Z" product-name="gameskey">
+		<header/>
+		<body>
+			<trans-unit id="title.description" resname="title.description">
+				<source>title</source>
+			</trans-unit>
+			<trans-unit id="description.description" resname="description.description">
+				<source>description</source>
+			</trans-unit>
+			<trans-unit id="rating.description" resname="rating.description">
+				<source>Rating /5</source>
+			</trans-unit>
+			<trans-unit id="rating_count.description" resname="rating_count.description">
+				<source>Count how much users ratet the game</source>
+			</trans-unit>
+			<trans-unit id="rating_sum.description" resname="rating_sum.description">
+				<source>All ratings Sum</source>
+			</trans-unit>
+			<trans-unit id="image.description" resname="image.description">
+				<source>Image of the game</source>
+			</trans-unit>
+			<trans-unit id="rel_date.description" resname="rel_date.description">
+				<source>Realese date</source>
+			</trans-unit>
+			<trans-unit id="fsk18.description" resname="fsk18.description">
+				<source>fsk18</source>
+			</trans-unit>
+			<trans-unit id="action.description" resname="action.description">
+				<source>action</source>
+			</trans-unit>
+			<trans-unit id="multiplayer.description" resname="multiplayer.description">
+				<source>multiplayer</source>
+			</trans-unit>
+			<trans-unit id="singleplayer.description" resname="singleplayer.description">
+				<source>singleplayer</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
